@@ -50,7 +50,7 @@ public class GraphServiceController {
 				.setTimeoutSeconds(120)
 				.build();
 		
-		server.initServices(new GraphCreationService()); //Adding services
+		server.initServices(new SampleService()); //Adding services
 				
 		server.startServer();
 		System.out.println("Qbit service end point started....");
@@ -71,7 +71,7 @@ public class GraphServiceController {
 	 * 
 	 * 
 	 */
-	public static class GraphCreationService {
+	public static class SampleService {
          //Test3
 		/**
 		 * Ping it
@@ -85,8 +85,5 @@ public class GraphServiceController {
 			return "OK";
 		}
 	}
-
-
-
 
 }
