@@ -54,9 +54,8 @@ public class GraphService {
 	}
     public static void main(String[] args) {
 
-        try {
-        
-            System.out.println("Starting the GraphService...................................");
+        try {       
+            System.out.println("Starting the GraphService................................");
             singletonInstance.startService();
             System.out.println("GraphService Stopped main thread released...............................");
 
@@ -71,6 +70,7 @@ public class GraphService {
         }
 
     }
+    
 
     private void notifyOnStopService() {
 

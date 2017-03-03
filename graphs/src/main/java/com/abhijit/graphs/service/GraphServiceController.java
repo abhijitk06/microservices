@@ -1,5 +1,7 @@
 package com.abhijit.graphs.service;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 
 import io.advantageous.qbit.annotation.RequestMapping;
@@ -72,7 +74,7 @@ public class GraphServiceController {
 	 * 
 	 */
 	public static class SampleService {
-         //Test3
+    
 		/**
 		 * Ping it
 		 * 
@@ -82,6 +84,19 @@ public class GraphServiceController {
 		public String ping() {
 			System.out.println("OK");
 			logger.info("Received ping request");
+			return "OK";
+		}
+		
+		@RequestMapping("/dosamplework")
+		public String doSampleWork() {
+			System.out.println("Starting work");
+			try {
+				TimeUnit.SECONDS.sleep(30);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Work completed");
 			return "OK";
 		}
 	}
